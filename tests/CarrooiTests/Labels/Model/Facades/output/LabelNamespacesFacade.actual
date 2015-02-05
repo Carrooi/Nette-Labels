@@ -1,0 +1,4 @@
+Carrooi\Labels\Model\Entities\LabelNamespace::__set_state(array(
+	'name' => 'test',
+	'id' => 1,
+))

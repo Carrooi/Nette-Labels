@@ -1,0 +1,55 @@
+php:
+	date.timezone: Europe/Prague
+
+
+parameters:
+
+	databasePath: null
+
+
+extensions:
+	- Kdyby\Console\DI\ConsoleExtension
+	- Kdyby\Events\DI\EventsExtension
+	- Kdyby\Annotations\DI\AnnotationsExtension
+
+	labels: Carrooi\Labels\DI\LabelsExtension
+	doctrine: Kdyby\Doctrine\DI\OrmExtension
+
+
+nette:
+	security:
+		frames: null
+
+	session:
+		autoStart: false
+
+
+services:
+
+	cacheStorage:
+		class: Nette\Caching\Storages\MemoryStorage
+
+
+	- CarrooiTests\LabelsApp\Model\Facades\Users
+	- CarrooiTests\LabelsApp\Model\Facades\Mails
+	- CarrooiTests\LabelsApp\Model\Facades\Articles
+
+
+doctrine:
+
+	driver: pdo_sqlite
+	path: %databasePath%
+	memory: true
+
+	metadata:
+		CarrooiTests\LabelsApp\Model\Entities: %appDir%/Model/Entities
+
+
+labels:
+
+	ownerClass: CarrooiTests\LabelsApp\Model\Entities\User
+	labelItemClass: CarrooiTests\LabelsApp\Model\Entities\LabelItem
+
+	entities:
+		CarrooiTests\LabelsApp\Model\Entities\Mail: mail
+		CarrooiTests\LabelsApp\Model\Entities\Article: article

@@ -1,0 +1,12 @@
+Carrooi\Labels\Model\Entities\Label::__set_state(array(
+	'namespace' => Carrooi\Labels\Model\Entities\LabelNamespace::__set_state(array(
+		'name' => 'test',
+		'id' => 1,
+	)),
+	'owner' => CarrooiTests\LabelsApp\Model\Entities\User::__set_state(array(
+		'id' => 1,
+	)),
+	'title' => 'Test',
+	'name' => 'test',
+	'id' => 1,
+))
