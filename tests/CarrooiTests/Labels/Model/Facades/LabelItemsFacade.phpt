@@ -27,7 +27,6 @@ class LabelItemsFacadeTest extends TestCase
 {
 
 
-
 	/** @var \Carrooi\Labels\Model\Facades\LabelNamespacesFacade */
 	private $namespaces;
 
