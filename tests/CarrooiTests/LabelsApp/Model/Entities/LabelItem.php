@@ -2,8 +2,11 @@
 
 namespace CarrooiTests\LabelsApp\Model\Entities;
 
-use Carrooi\Labels\Model\Entities\BaseLabelItem;
+use Carrooi\Labels\Model\Entities\ILabelItem;
+use Carrooi\Labels\Model\Entities\TLabelItem;
 use Doctrine\ORM\Mapping as ORM;
+use Kdyby\Doctrine\Entities\Attributes\Identifier;
+use Kdyby\Doctrine\Entities\BaseEntity;
 
 /**
  *
@@ -11,8 +14,13 @@ use Doctrine\ORM\Mapping as ORM;
  *
  * @author David Kudera
  */
-class LabelItem extends BaseLabelItem
+class LabelItem extends BaseEntity implements ILabelItem
 {
+
+
+	use Identifier;
+
+	use TLabelItem;
 
 
 	/**

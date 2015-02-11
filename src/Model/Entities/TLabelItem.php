@@ -3,20 +3,13 @@
 namespace Carrooi\Labels\Model\Entities;
 
 use Doctrine\ORM\Mapping as ORM;
-use Kdyby\Doctrine\Entities\Attributes\Identifier;
-use Kdyby\Doctrine\Entities\BaseEntity;
 
 /**
  *
- * @ORM\MappedSuperclass
- *
  * @author David Kudera
  */
-abstract class BaseLabelItem extends BaseEntity implements ILabelItem
+trait TLabelItem
 {
-
-
-	use Identifier;
 
 
 	/**
