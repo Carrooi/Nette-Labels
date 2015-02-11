@@ -101,6 +101,18 @@ class LabelsFacade extends Object
 
 
 	/**
+	 * @param int $id
+	 * @return \Carrooi\Labels\Model\Entities\Label
+	 */
+	public function findLabelById($id)
+	{
+		return $this->dao->findOneBy([
+			'id' => $id,
+		]);
+	}
+
+
+	/**
 	 * @param \Carrooi\Labels\Model\Entities\Label $label
 	 * @param string $title
 	 * @param string $name

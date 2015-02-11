@@ -76,6 +76,20 @@ class LabelsFacadeTest extends TestCase
 	}
 
 
+	public function testFindLabelById()
+	{
+		$namespace = $this->namespaces->addNamespace('test');
+		$user = $this->users->create();
+
+		$label = $this->labels->addLabel($namespace, $user, 'Bug', 'bug');
+
+		$found = $this->labels->findLabelById($label->getId());
+
+		Assert::notSame(null, $found);
+		Assert::same($label->getId(), $found->getId());
+	}
+
+
 	public function testRenameLabel()
 	{
 		$namespace = $this->namespaces->addNamespace('test');
