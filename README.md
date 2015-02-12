@@ -30,9 +30,9 @@ labels:
 		App\Model\Entities\Article: article
 ```
 
-**ownerClass**: Most probably your `User` entity
-**labelItemClass**: Entity with associations between your labels and labelable entities
-**entities**: List of labelable entities with name of column in your `LabelItem` entity
+* **ownerClass**: Most probably your `User` entity
+* **labelItemClass**: Entity with associations between your labels and labelable entities
+* **entities**: List of labelable entities with name of column in your `LabelItem` entity
 
 ## Owner entity
 
