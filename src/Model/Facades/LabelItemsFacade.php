@@ -157,11 +157,11 @@ class LabelItemsFacade extends Object
 
 
 	/**
-	 * @param \Carrooi\Labels\Model\Entities\ILabelableEntity $item
 	 * @param \Carrooi\Labels\Model\Entities\Label $label
+	 * @param \Carrooi\Labels\Model\Entities\ILabelableEntity $item
 	 * @return $this
 	 */
-	public function removeItemFromLabel(ILabelableEntity $item, Label $label)
+	public function removeItemFromLabel(Label $label, ILabelableEntity $item)
 	{
 		$class = get_class($item);
 

@@ -220,7 +220,7 @@ class LabelItemsFacadeTest extends TestCase
 		$mail = $this->mails->create();
 
 		Assert::exception(function() use ($mail, $label) {
-			$this->items->removeItemFromLabel($mail, $label);
+			$this->items->removeItemFromLabel($label, $mail);
 		}, 'Carrooi\Labels\InvalidArgumentException', 'Item CarrooiTests\LabelsApp\Model\Entities\Mail('. $mail->getId(). ') is not in label '. $label->getId(). '.');
 	}
 
@@ -236,7 +236,7 @@ class LabelItemsFacadeTest extends TestCase
 
 		Assert::true($this->items->isItemInLabel($mail, $label));
 
-		$this->items->removeItemFromLabel($mail, $label);
+		$this->items->removeItemFromLabel($label, $mail);
 
 		Assert::false($this->items->isItemInLabel($mail, $label));
 	}
