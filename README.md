@@ -45,7 +45,6 @@ namespace App\Model\Entities;
 
 use Carrooi\Labels\Model\Entities\ILabelOwner;
 use Doctrine\ORM\Mapping as ORM;
-use Kdyby\Doctrine\Entities\Attributes\Identifier;
 
 /**
  * @ORM\Entity
@@ -214,7 +213,7 @@ $namespaces->removeNamespace($namespace);
 
 ## Labels facade
 
-Now you can let your users create own labels. There is `Carrooi\Labels\Model\Facades\LabelsFacade` service.
+Now you can let your users create own labels. There is `Carrooi\Labels\Model\Facades\LabelsFacade` service for that.
 
 **Creating label**:
 
